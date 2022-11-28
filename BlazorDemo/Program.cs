@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using BlazorDemo.Data;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,11 +14,11 @@ builder.Services.AddServerSideBlazor();
 //Conf Health Checks
 builder.Services.AddHealthChecks()
     .AddCheck("Foo service", () =>
-        HealthCheckResult.Degraded("foo Service Check Did Not Work Well!"))
+        HealthCheckResult.Degraded("foo Service Check Did Not Work Well!"), new[] {"service"})
     .AddCheck("Bar service", () =>
-        HealthCheckResult.Healthy("Bar Service Check Worked!"))
+        HealthCheckResult.Healthy("Bar Service Check Worked!"),new[] {"service"})
     .AddCheck("database", () =>
-        HealthCheckResult.Healthy("Database Check Worked!"));
+        HealthCheckResult.Healthy("Database Check Worked!"), new[] {"database", "SQL"});
 builder.Services.AddSingleton<WeatherForecastService>();
 
 var app = builder.Build();
@@ -37,7 +39,20 @@ app.UseRouting();
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapHealthChecks("/health");
+    endpoints.MapHealthChecks("/quick_health", new HealthCheckOptions()
+    {
+        Predicate = _ => false
+    });
+    endpoints.MapHealthChecks("/health/services", new HealthCheckOptions()
+    {
+        Predicate = reg => reg.Tags.Contains("service"),
+        ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+
+    });
+    endpoints.MapHealthChecks("/health", new HealthCheckOptions()
+    {
+        ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+    });
 });
 
 app.MapBlazorHub();

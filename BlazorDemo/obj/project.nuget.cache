@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2nxZxr1xUbj+8RrxdRXKNhzmuOPU4Wz5ZaL9tzley3cODy9fK+oI8uas4ofkhmo+RpPNiydOYK0srjeBQh74Ig==",
+  "dgSpecHash": "aPPtELN8iith/FP6Jnpqf72aacWVD4v9I1k1ZraP6YdnIAWtwl/vuQXTi0/9jdJVGquvtHR02SNXUrEhdgdb0g==",
   "success": true,
   "projectFilePath": "/Users/bardia/Desktop/HealthCheckDemo/BlazorDemo/BlazorDemo.csproj",
   "expectedPackageFiles": [
     "/Users/bardia/.nuget/packages/aspnetcore.healthchecks.ui/6.0.5/aspnetcore.healthchecks.ui.6.0.5.nupkg.sha512",
     "/Users/bardia/.nuget/packages/aspnetcore.healthchecks.ui.client/6.0.5/aspnetcore.healthchecks.ui.client.6.0.5.nupkg.sha512",
     "/Users/bardia/.nuget/packages/aspnetcore.healthchecks.ui.core/6.0.5/aspnetcore.healthchecks.ui.core.6.0.5.nupkg.sha512",
-    "/Users/bardia/.nuget/packages/aspnetcore.healthchecks.ui.inmemory.storage/6.0.5/aspnetcore.healthchecks.ui.inmemory.storage.6.0.5.nupkg.sha512",
     "/Users/bardia/.nuget/packages/automapper/9.0.0/automapper.9.0.0.nupkg.sha512",
     "/Users/bardia/.nuget/packages/fractions/4.0.1/fractions.4.0.1.nupkg.sha512",
     "/Users/bardia/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
@@ -20,7 +19,6 @@
     "/Users/bardia/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.7/microsoft.entityframeworkcore.abstractions.6.0.7.nupkg.sha512",
     "/Users/bardia/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.7/microsoft.entityframeworkcore.analyzers.6.0.7.nupkg.sha512",
     "/Users/bardia/.nuget/packages/microsoft.entityframeworkcore.design/6.0.7/microsoft.entityframeworkcore.design.6.0.7.nupkg.sha512",
-    "/Users/bardia/.nuget/packages/microsoft.entityframeworkcore.inmemory/6.0.7/microsoft.entityframeworkcore.inmemory.6.0.7.nupkg.sha512",
     "/Users/bardia/.nuget/packages/microsoft.entityframeworkcore.relational/6.0.7/microsoft.entityframeworkcore.relational.6.0.7.nupkg.sha512",
     "/Users/bardia/.nuget/packages/microsoft.entityframeworkcore.relational.design/2.0.0-preview1-final/microsoft.entityframeworkcore.relational.design.2.0.0-preview1-final.nupkg.sha512",
     "/Users/bardia/.nuget/packages/microsoft.entityframeworkcore.sqlite/6.0.7/microsoft.entityframeworkcore.sqlite.6.0.7.nupkg.sha512",
